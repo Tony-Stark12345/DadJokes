@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <title>Hello World</title>
+        <script>
+        var jokes =document.getElementById('joke');
+        var jokebtn = document.getElementById("jokeBtn");
+        function generate(){
+        var setHeader={
+        headers:{
+        Accept:"application/json"
+        }
+        }
+        fetch('https://icanhazdadjoke.com',setHeader)
+        .then((res) => res.json())
+        .then((data) => {jokes.innerHTML = data.joke;
+        })
+        
+        
+        }
+        generate ();
+        </script>
+    </head>
+    <body>
+        <div class="out">
+            <div class="in">
+              <h2>🤩👻Best Jokes to make your day!!!🤩👻</h2><br/>
+              <span id="joke" value="">Joke is loading...</span><br/><br />
+              <input return false onclick="generate()" type="button" id="jokeBtn" value="Next Joke">
+            </div>
+            <input type="button" class="fb" onclick="ff()" value ="Facebook">
+        </div>
+       
+        <script>
+         var jokes =document.getElementById('joke');
+         var jokebtn = document.getElementById("jokeBtn");
+         function generate(){
+           var setHeader={
+           headers:{
+              Accept:"application/json"
+              }
+           }
+         fetch('https://icanhazdadjoke.com',setHeader)
+         .then((res) => res.json())
+         .then((data) => {
+             jokes.innerHTML = data.joke;
+            })
+         
+         
+         }
+         generate ();
+        </script>
+        <style type="text/css">
+        *{
+        margin:0;
+        padding:0;
+        }
+        body{
+        place-items:center;
+        background-color:#1D77B6;
+        
+        }
+        .in{
+        align:center;
+        background-color:White;
+        height:300px;
+        width:300px;
+        padding-left:20px;;
+        box-shadow:5px 5px 10px Gray;
+        padding-right:10px;
+        
+        }
+        .out{
+        height:100vh;
+        width:100vw;
+        padding-left:15px;
+        padding-top:35px;
+        display:flex;
+        justify-content:center ;
+        }
+        input{
+        color:Yellow;
+        background-color:#FFB21E;
+        height:70px;
+        width:200px;
+        font-size:32px;
+        border-radius:20px;
+        border-color:#fff;
+        }
+        span{
+        font-size:22px;
+        font-family: 'Londrina Solid', cursive;
+        
+        }
+        h2{
+        font-family: 'Pacifico', cursive;
+        }
+        .fb{
+        color:Yellow;
+        background-color:Blue;
+        height:70px;
+        width:200px;
+        font-size:32px;
+        border-radius:20px;
+        border-color:#fff;
+        position:absolute ;
+        bottom:0;
+        border-color:#1D77B6;
+        }
+        </style>
+        <script type="text/javascript">
+        alert ("Created by Tony Stark");
+        alert ("If you think that I had written all the jokes...");
+        alert ("...Then you are absolutely WRONG !!!...");
+        alert ("...All the jokes are coming from API !!!");
+        setInterval(() => {
+        alert("Don't forget to like and share this code!!!");
+        },15000)
+        function ff(){
+        window.location="";
+        }
+        </script>
+    </body>
+</html>
